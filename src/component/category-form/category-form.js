@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import autoBind from './../../utils';
+import autoBind from '../../utils';
 
 const defaultState = {
   name: '',
@@ -30,9 +30,9 @@ export default class CategoryForm extends React.Component {
       <form onSubmit={this.handleSubmit} className='category-form'>
       <input
       type="text"
-      name="title"
-      placeholder="title"
-      value={this.state.title}
+      name="name"
+      placeholder="name"
+      value={this.state.name}
       onChange={this.handleChange}
       />
       <input
@@ -42,7 +42,7 @@ export default class CategoryForm extends React.Component {
       value={this.state.budget}
       onChange={this.handleChange}
       />
-      <button type="submit">{buttonText} Category</button>
+      <button type="submit">{buttonText}</button>
       </form>
     );
   }
