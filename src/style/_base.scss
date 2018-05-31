@@ -1,0 +1,15 @@
+@import 'vars';
+
+html, body {
+  background: $background-color;
+  font-family: 'Times New Roman';
+  color: $font-color;
+}
+
+a {
+  color: $font-color;
+}
+
+.error {
+  color: $error;
+}
