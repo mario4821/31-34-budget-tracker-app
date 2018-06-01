@@ -27,7 +27,7 @@ export default (state = emptyState, { type, payload }) => {
     case 'EXPENSE_DESTROY':
       categoryId = payload.categoryId; //eslint-disable-line
       categoryExpenses = state[categoryId];
-      updatedExpenses = categoryExpenses.filter(card => (card.id !== payload.id));
+      updatedExpenses = categoryExpenses.filter(expense => (expense.id !== payload.id));
       return { ...state, [categoryId]: updatedExpenses };
     default:
       return state;

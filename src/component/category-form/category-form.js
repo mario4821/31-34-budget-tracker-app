@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import autoBind from '../../utils';
+import autoBind from '../../utils/index';
 
 const defaultState = {
   name: '',
@@ -27,7 +27,7 @@ export default class CategoryForm extends React.Component {
   render() {
     const buttonText = this.props.category ? 'Update' : 'Create';
     return (
-      <form onSubmit={this.handleSubmit} className='category-form'>
+      <form onSubmit={this.handleSubmit} className="category-form">
       <input
       type="text"
       name="name"
