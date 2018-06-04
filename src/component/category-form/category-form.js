@@ -17,11 +17,12 @@ export default class CategoryForm extends React.Component {
   handleSubmit(event) {
     event.preventDefault();
     this.props.onComplete(this.state);
+    this.setState(defaultState);
   }
 
   handleChange(event) {
     const { name, value } = event.target;
-    this.setState({ [name]: value });
+    return this.setState({ [name]: value });
   }
 
   render() {
