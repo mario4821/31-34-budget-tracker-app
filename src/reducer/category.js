@@ -1,6 +1,6 @@
 const defaultState = [];
 
-const categoryReducer = (state = defaultState, { type, payload }) => {
+export default (state = defaultState, { type, payload }) => {
   switch (type) {
     case 'CATEGORY_CREATE':
       return [...state, payload];
@@ -13,4 +13,3 @@ const categoryReducer = (state = defaultState, { type, payload }) => {
   }
 };
 
-export default categoryReducer;

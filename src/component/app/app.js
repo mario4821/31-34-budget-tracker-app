@@ -12,7 +12,7 @@ export default class App extends React.Component {
         <header>
           <h1>Budget Tracker</h1>
           </header>
-          <Route exact path="/" component={Dashboard} />
+          <Route exact path="/" component={Dashboard}/>
           </div>
           </BrowserRouter>
           </div>
