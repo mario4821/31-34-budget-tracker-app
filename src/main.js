@@ -5,11 +5,12 @@ import { Provider } from 'react-redux';
 import { composeWithDevTools } from 'redux-devtools-extension';
 import App from './component/app/app';
 import reducer from './reducer/main';
+import session from './lib/redux-session';
+import reporter from './lib/redux-reporter';
 
 import './style/main.scss';
 
-const middleware = {};
-const store = createStore(reducer, composeWithDevTools(applyMiddleware(...middleware)));
+const store = createStore(reducer, composeWithDevTools(applyMiddleware(session, reporter)));
 
 const container = document.createElement('div');
 document.body.appendChild(container);
